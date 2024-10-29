@@ -1,0 +1,171 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Productos - Sachtom's</title>
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+    <!-- Barra de navegación con logo -->
+    <header>
+        <nav>
+            <div class="logo-container">
+                <a href="index.html">
+                    <img src="images/logo.jpg" alt="Logo de Sachtom's" class="logo">
+                </a>
+            </div>
+            <ul>
+                <li><a href="index.html">Inicio</a></li>
+                <li><a href="productos.html">Productos</a></li>
+                <li><a href="nosotros.html">Nosotros</a></li>
+                <li><a href="contacto.html">Contacto</a></li>
+            </ul>
+            <button class="cta-button" onclick="window.location.href='contacto.html'">Compra Ahora</button>
+        </nav>
+    </header>
+
+    <!-- Sección de Productos -->
+    <section id="productos" class="section-bg">
+        <h2>Nuestros Productos</h2>
+        <p>Conoce el yogurt de Sacha Tomate, un producto único que combina el sabor exótico y los beneficios nutricionales.</p>
+        <img src="images/fotoinicio.jpg" alt="Yogurt de Sacha Tomate" class="product-image">
+
+        <!-- Información de Nutrición en cuadrícula -->
+        <div class="nutricion-grid">
+            <div class="nutricion-item">
+                <h3>Proteína</h3>
+                <p>1.6g</p>
+            </div>
+            <div class="nutricion-item">
+                <h3>Carbohidratos</h3>
+                <p>11.9g</p>
+            </div>
+            <div class="nutricion-item">
+                <h3>Fibra</h3>
+                <p>6g</p>
+            </div>
+            <div class="nutricion-item">
+                <h3>Vitaminas y Minerales</h3>
+                <p>Incluye vitaminas A, C, E y potasio</p>
+            </div>
+        </div>
+        <button onclick="window.location.href='productos.html'" class="explorar-button">Explorar Más Productos</button>
+    </section>
+
+    <!-- Características del Producto con Tabs -->
+    <section id="caracteristicas">
+        <h2>Características Destacadas</h2>
+        <div class="tabs">
+            <button class="tab-button" onclick="showTab('beneficios')">Beneficios</button>
+            <button class="tab-button" onclick="showTab('ingredientes')">Ingredientes</button>
+            <button class="tab-button" onclick="showTab('usos')">Usos</button>
+        </div>
+        <div id="beneficios" class="tab-content active">
+            <ul>
+                <li>Rico en antioxidantes, vitaminas A, C y E</li>
+                <li>Contribuye a la salud digestiva</li>
+                <li>Bajo en calorías y grasas</li>
+            </ul>
+        </div>
+        <div id="ingredientes" class="tab-content">
+            <p>Nuestro yogurt está hecho con:</p>
+            <ul>
+                <li>Tomate fresco</li>
+                <li>Leche de vaca de alta calidad</li>
+                <li>Espirulina para un valor nutricional extra</li>
+                <li>Edulcorante natural: Stevia</li>
+            </ul>
+        </div>
+        <div id="usos" class="tab-content">
+            <p>Ideal para:</p>
+            <ul>
+                <li>Desayunos saludables</li>
+                <li>Snacks o postres naturales</li>
+                <li>Complemento nutricional en dietas balanceadas</li>
+            </ul>
+        </div>
+    </section>
+
+    <!-- Comparativa Nutricional -->
+    <section id="comparativa">
+        <h2>Comparativa Nutricional</h2>
+        <p>Descubre cómo nuestro yogurt de Sacha Tomate se compara con otros productos en el mercado:</p>
+        <table>
+            <thead>
+                <tr>
+                    <th>Producto</th>
+                    <th>Calorías</th>
+                    <th>Proteína</th>
+                    <th>Carbohidratos</th>
+                    <th>Fibra</th>
+                    <th>Grasas</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td>Sachtom's Yogurt de Sacha Tomate</td>
+                    <td>60 kcal</td>
+                    <td>1.6g</td>
+                    <td>11.9g</td>
+                    <td>6g</td>
+                    <td>0.2g</td>
+                </tr>
+                <tr>
+                    <td>Yogurt de frutas tradicional</td>
+                    <td>120 kcal</td>
+                    <td>5g</td>
+                    <td>18g</td>
+                    <td>1g</td>
+                    <td>3.5g</td>
+                </tr>
+                <tr>
+                    <td>Yogurt griego natural</td>
+                    <td>90 kcal</td>
+                    <td>10g</td>
+                    <td>6g</td>
+                    <td>0g</td>
+                    <td>5g</td>
+                </tr>
+            </tbody>
+        </table>
+    </section>
+
+    <!-- Calculadora de Calorías -->
+    <section id="calculadora">
+        <h2>Calculadora de Calorías</h2>
+        <p>Introduce la cantidad de porciones que deseas consumir para calcular el total de calorías:</p>
+        <label for="cantidad">Cantidad de porciones (1 porción = 60 calorías):</label>
+        <input type="number" id="cantidad" min="1" value="1">
+        <button onclick="calcularCalorias()">Calcular</button>
+        <p id="resultado-calorias"></p>
+    </section>
+
+    <footer>
+        <p>&copy; 2024 Sachtom's Yogurt - Todos los derechos reservados.</p>
+    </footer>
+
+    <script>
+        function showTab(tabId) {
+            var tabs = document.querySelectorAll('.tab-content');
+            var buttons = document.querySelectorAll('.tab-button');
+            tabs.forEach(function(tab) {
+                tab.classList.remove('active');
+            });
+            buttons.forEach(function(button) {
+                button.classList.remove('active-button');
+            });
+            document.getElementById(tabId).classList.add('active');
+            event.currentTarget.classList.add('active-button');
+        }
+
+        function calcularCalorias() {
+            const caloriasPorPorcion = 60; // Calorías en una porción de Sachtom's Yogurt
+            const cantidad = document.getElementById("cantidad").value;
+            const totalCalorias = caloriasPorPorcion * cantidad;
+            document.getElementById("resultado-calorias").textContent = 
+                `Calorías totales: ${totalCalorias} kcal`;
+        }
+    </script>
+</body>
+</html>

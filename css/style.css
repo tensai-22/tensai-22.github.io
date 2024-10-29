@@ -16,20 +16,28 @@ body {
     color: var(--primary-color);
     margin: 0;
     padding: 0;
+    transition: background-color 0.5s;
 }
 
+/* Encabezado y Navegación */
 header {
     background-color: var(--header-bg-color);
-    padding: 10px 0;
-    text-align: center;
+    padding: 15px 20px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1);
+    position: relative;
 }
 
 nav ul {
     list-style: none;
     padding: 0;
+    margin: 0;
     display: flex;
+    gap: 20px;
+    flex-grow: 1;
     justify-content: center;
-    gap: 15px;
 }
 
 nav ul li a {
@@ -37,32 +45,243 @@ nav ul li a {
     text-decoration: none;
     font-weight: bold;
     padding: 10px 15px;
-    transition: color 0.3s;
+    transition: color 0.3s, transform 0.2s;
 }
 
 nav ul li a:hover {
     color: var(--accent-color-orange);
+    transform: scale(1.05);
 }
 
-section {
-    padding: 20px;
-    margin: 20px auto;
-    max-width: 800px;
-    background-color: white;
+.cta-button {
+    background-color: var(--accent-color-green);
+    color: white;
+    padding: 10px 20px;
+    border: none;
     border-radius: 5px;
+    cursor: pointer;
+    font-weight: bold;
+    transition: background-color 0.3s, transform 0.2s;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.15);
+}
+
+.cta-button:hover {
+    background-color: var(--accent-color-red);
+    transform: scale(1.05);
+}
+
+.logo-container {
+    position: absolute;
+    top: 10px;
+    right: 20px;
+}
+
+.logo {
+    width: 150px; /* Ajusta el tamaño del logo aquí */
+    transition: transform 0.3s;
+}
+
+.logo:hover {
+    transform: scale(1.1);
+}
+
+/* Hero Section */
+#hero {
+    position: relative;
+    background-image: linear-gradient(to bottom, rgba(255, 255, 255, 0.1), rgba(0, 0, 0, 0.5)), url('images/fotoinicio.jpg');
+    background-size: cover;
+    background-position: center;
+    color: #FFF5E3;
+    padding: 150px 20px;
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+#hero h1 {
+    font-size: 3em;
+    color: var(--accent-color-green);
+    margin-bottom: 15px;
+    text-shadow: 1px 1px 4px rgba(0, 0, 0, 0.3);
+}
+
+#hero p {
+    font-size: 1.4em;
+    margin-bottom: 20px;
+    text-shadow: 1px 1px 4px rgba(0, 0, 0, 0.3);
+}
+
+.explorar-button {
+    background-color: var(--accent-color-green);
+    color: white;
+    padding: 12px 25px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 1.1em;
+    font-weight: bold;
+    transition: background-color 0.3s, transform 0.2s;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.2);
+}
+
+.explorar-button:hover {
+    background-color: var(--accent-color-red);
+    transform: scale(1.05);
+}
+
+/* Sección de Producto Destacado */
+#producto-destacado {
+    background-color: var(--accent-color-orange);
+    color: var(--header-text-color);
+    padding: 60px 20px;
+    text-align: center;
+    border-radius: 8px;
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.product-image {
+    max-width: 80%;
+    height: auto;
+    margin-top: 20px;
+    border-radius: 10px;
+    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.2);
+}
+
+/* Beneficios Grid */
+.beneficios-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 20px;
+    padding: 40px 20px;
+    background-color: #FFF5E3;
     text-align: center;
 }
 
-h1, h2 {
-    color: var(--accent-color-green);
+.beneficio {
+    background-color: white;
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s, box-shadow 0.3s;
 }
 
-p, ul {
-    text-align: left;
+.beneficio:hover {
+    transform: scale(1.05);
+    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.2);
+}
+
+.beneficio h3 {
+    color: var(--accent-color-red);
+    font-size: 1.3em;
+    margin-bottom: 10px;
+}
+
+/* Llamado a la Acción */
+#cta {
+    background-color: var(--accent-color-green);
+    color: white;
+    text-align: center;
+    padding: 60px 20px;
+    border-radius: 8px;
+    margin: 20px auto;
+    max-width: 800px;
+}
+
+#cta .cta-content h2 {
+    font-size: 2.5em;
+    margin-bottom: 10px;
+}
+
+#cta .cta-content p {
+    font-size: 1.2em;
+    margin-bottom: 20px;
+}
+
+#cta button {
+    background-color: white;
+    color: var(--accent-color-green);
+    padding: 12px 25px;
+    border: none;
+    border-radius: 5px;
     font-size: 1.1em;
-    line-height: 1.6;
-    margin-bottom: 15px;
+    font-weight: bold;
+    cursor: pointer;
+    transition: background-color 0.3s, transform 0.2s;
+}
+
+#cta button:hover {
+    background-color: var(--accent-color-red);
+    color: white;
+    transform: scale(1.05);
+}
+
+/* Cuadrícula de Información Nutricional (Productos) */
+.nutricion-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
+    gap: 20px;
+    text-align: center;
+    margin-top: 20px;
+}
+
+.nutricion-item {
+    background-color: #FFF5E3;
+    padding: 15px;
+    border: 1px solid #ddd;
+    border-radius: 8px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+.nutricion-item h3 {
+    color: var(--accent-color-green);
+    font-size: 1.2em;
+    margin-bottom: 10px;
+}
+
+.nutricion-item p {
+    font-size: 1em;
+    color: var(--primary-color);
+}
+
+/* Estilos de Tabs (Productos) */
+.tabs {
+    display: flex;
+    justify-content: center;
+    gap: 10px;
+    margin-top: 20px;
+}
+
+.tab-button {
+    padding: 10px 20px;
+    background-color: var(--accent-color-green);
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    font-weight: bold;
+    transition: background-color 0.3s, transform 0.2s;
+}
+
+.tab-button:hover,
+.tab-button.active-button {
+    background-color: var(--accent-color-red);
+    transform: scale(1.05);
+}
+
+.tab-content {
+    display: none;
+    margin-top: 20px;
+}
+
+.tab-content.active {
+    display: block;
+}
+
+/* Tablas (Comparativa Productos) */
+#comparativa {
+    margin-top: 40px;
 }
 
 table {
@@ -83,29 +302,32 @@ th {
 }
 
 td {
-    background-color: #FFF5E3; /* Fondo de las celdas para que resalte */
+    background-color: #FFF5E3;
 }
 
-img {
-    max-width: 100%;
-    height: auto;
+/* Calculadora de Calorías */
+#calculadora {
+    text-align: center;
+    margin-top: 30px;
+}
+
+#calculadora label {
     display: block;
-    margin: 20px auto;
-    border-radius: 5px;
+    margin-bottom: 10px;
 }
 
-/* Botones */
-button {
-    background-color: var(--accent-color-green);
-    color: white;
-    padding: 10px 20px;
-    border: none;
-    border-radius: 5px;
-    cursor: pointer;
-    font-size: 1em;
-    transition: background-color 0.3s;
+#resultado-calorias {
+    font-weight: bold;
+    margin-top: 15px;
 }
 
-button:hover {
-    background-color: var(--accent-color-red);
+/* Pie de Página */
+footer {
+    background-color: var(--header-bg-color);
+    color: var(--header-text-color);
+    padding: 15px 0;
+    text-align: center;
+    font-size: 0.9em;
+    margin-top: 20px;
+    box-shadow: 0px -4px 8px rgba(0, 0, 0, 0.1);
 }

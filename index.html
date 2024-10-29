@@ -3,29 +3,77 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Sachtom's - Gestión de Proyectos</title>
+    <title>Sachtom's - Bienvenidos</title>
     <link rel="stylesheet" href="css/style.css">
 </head>
 <body>
-    <!-- Barra de navegación -->
+    <!-- Barra de navegación con logo grande en la esquina superior derecha y botón de acción -->
     <header>
         <nav>
             <ul>
                 <li><a href="index.html">Inicio</a></li>
-                <li><a href="planeamiento.html">Planeamiento Estratégico</a></li>
-                <li><a href="producto.html">Análisis de Producto</a></li>
-                <li><a href="mercado.html">Análisis de Mercado</a></li>
-                <li><a href="foda.html">Análisis FODA</a></li>
-                <li><a href="proveedores.html">Proveedores</a></li>
+                <li><a href="productos.html">Productos</a></li>
+                <li><a href="nosotros.html">Nosotros</a></li>
                 <li><a href="contacto.html">Contacto</a></li>
             </ul>
+            <button class="cta-button" onclick="window.location.href='contacto.html'">Compra Ahora</button>
+            <div class="logo-container">
+                <a href="index.html">
+                    <img src="images/logo.jpg" alt="Logo de Sachtom's" class="logo">
+                </a>
+            </div>
         </nav>
     </header>
 
-    <section>
-        <h1>Bienvenidos a Sachtom's</h1>
-        <p>Explora nuestro innovador proyecto de yogurt de Sacha Tomate, un producto pensado para promover la salud y la sostenibilidad. Este sitio web ofrece información detallada sobre nuestra estrategia, análisis de producto, mercado objetivo y más.</p>
-        <img src="images/sachtoms_intro.jpg" alt="Sachtom's - Yogurt de Sacha Tomate">
+    <!-- Hero Section con Imagen de Fondo y Mensaje de Bienvenida -->
+    <section id="hero">
+        <div class="overlay">
+            <h1>Bienvenidos a Sachtom's</h1>
+            <p>Revoluciona tu estilo de vida con nuestro exclusivo yogurt de Sacha Tomate.</p>
+            <button class="explorar-button" onclick="window.location.href='productos.html'">Descubre Más</button>
+        </div>
     </section>
+
+    <!-- Sección Destacada de Producto -->
+    <section id="producto-destacado" class="section-bg">
+        <h2>Un Yogurt Diferente</h2>
+        <p>Sachtom’s Yogurt de Sacha Tomate ofrece una experiencia única: nutritivo, delicioso y responsable con el medio ambiente.</p>
+        <img src="images/procesoyogurt.png" alt="Proceso de Sachtom's Yogurt de Sacha Tomate" class="product-image">
+    </section>
+
+    <!-- Sección de Beneficios Visualmente Destacada -->
+    <section id="beneficios">
+        <h2>¿Por Qué Elegir Sacha Tomate?</h2>
+        <div class="beneficios-grid">
+            <div class="beneficio">
+                <h3>Antioxidantes</h3>
+                <p>Protección celular para un bienestar integral.</p>
+            </div>
+            <div class="beneficio">
+                <h3>Vitaminas y Minerales</h3>
+                <p>Nutre tu cuerpo con lo mejor de la naturaleza.</p>
+            </div>
+            <div class="beneficio">
+                <h3>Bajo en Calorías</h3>
+                <p>Una opción saludable y ligera para tu dieta.</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- Sección de Llamado a la Acción Inspiracional -->
+    <section id="cta">
+        <div class="cta-content">
+            <h2>Únete a la Revolución Saludable</h2>
+            <p>Forma parte de nuestra misión de fomentar la salud y la sostenibilidad.</p>
+            <button onclick="window.location.href='contacto.html'">Contáctanos</button>
+        </div>
+    </section>
+
+    <footer>
+        <p>&copy; 2024 Sachtom's Yogurt - Todos los derechos reservados.</p>
+    </footer>
+
+    <script src="js/script.js"></script>
 </body>
 </html>
+
