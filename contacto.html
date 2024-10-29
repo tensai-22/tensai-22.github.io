@@ -7,25 +7,41 @@
     <link rel="stylesheet" href="css/style.css">
 </head>
 <body>
+    <!-- Barra de navegación con logo a la derecha y botón de acción -->
     <header>
-        <nav>
-            <ul>
+        <nav class="navbar">
+            <ul class="nav-links">
                 <li><a href="index.html">Inicio</a></li>
                 <li><a href="productos.html">Productos</a></li>
                 <li><a href="nosotros.html">Nosotros</a></li>
                 <li><a href="contacto.html">Contacto</a></li>
             </ul>
+            <div class="nav-right">
+                <button class="cta-button" onclick="window.location.href='contacto.html'">Compra Ahora</button>
+                <div class="logo-container">
+                    <a href="index.html">
+                        <img src="images/logo.png" alt="Logo de Sachtom's" class="logo">
+                    </a>
+                </div>
+            </div>
         </nav>
     </header>
 
-    <section>
+    <!-- Sección de Contacto -->
+    <section id="contacto">
         <h2>Contacto</h2>
         <p>Puedes comunicarte con nosotros a través de los siguientes medios:</p>
         <ul>
-            <li><strong>Correo electrónico:</strong> contacto@sachtoms.com</li>
+            <li><strong>Correo electrónico:</strong> hellosachtoms@gmail.com</li>
             <li><strong>Teléfono:</strong> +51 987 654 321</li>
-            <li><strong>Dirección:</strong> Av. Los Emprendedores 1234, Lima, Perú</li>
+            <li><strong>Dirección:</strong> Av. San Felipe 1234, Lima, Perú</li>
         </ul>
     </section>
+
+    <footer>
+        <p>&copy; 2024 Sachtom's Yogurt - Todos los derechos reservados.</p>
+    </footer>
+
+    <script src="js/script.js"></script>
 </body>
 </html>

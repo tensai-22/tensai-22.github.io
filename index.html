@@ -7,10 +7,10 @@
     <link rel="stylesheet" href="css/style.css">
 </head>
 <body>
-    <!-- Barra de navegación con logo grande en la esquina superior derecha y botón de acción -->
+    <!-- Barra de navegación con logo a la derecha y botón de acción -->
     <header>
-        <nav>
-            <ul>
+        <nav class="navbar">
+            <ul class="nav-links">
                 <li><a href="index.html">Inicio</a></li>
                 <li><a href="productos.html">Productos</a></li>
                 <li><a href="nosotros.html">Nosotros</a></li>
@@ -19,14 +19,14 @@
             <button class="cta-button" onclick="window.location.href='contacto.html'">Compra Ahora</button>
             <div class="logo-container">
                 <a href="index.html">
-                    <img src="images/logo.jpg" alt="Logo de Sachtom's" class="logo">
+                    <img src="images/logo.png" alt="Logo de Sachtom's" class="logo">
                 </a>
             </div>
         </nav>
     </header>
 
     <!-- Hero Section con Imagen de Fondo y Mensaje de Bienvenida -->
-    <section id="hero">
+    <section id="hero" style="background-image: url('images/fondo.jpg'); background-size: cover; background-position: center;">
         <div class="overlay">
             <h1>Bienvenidos a Sachtom's</h1>
             <p>Revoluciona tu estilo de vida con nuestro exclusivo yogurt de Sacha Tomate.</p>
@@ -76,4 +76,3 @@
     <script src="js/script.js"></script>
 </body>
 </html>
-

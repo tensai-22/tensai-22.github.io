@@ -7,20 +7,30 @@
     <link rel="stylesheet" href="css/style.css">
 </head>
 <body>
+    <!-- Barra de navegación con logo a la derecha y botón de acción -->
     <header>
-        <nav>
-            <ul>
+        <nav class="navbar">
+            <ul class="nav-links">
                 <li><a href="index.html">Inicio</a></li>
                 <li><a href="productos.html">Productos</a></li>
                 <li><a href="nosotros.html">Nosotros</a></li>
                 <li><a href="contacto.html">Contacto</a></li>
             </ul>
+            <div class="nav-right">
+                <button class="cta-button" onclick="window.location.href='contacto.html'">Compra Ahora</button>
+                <div class="logo-container">
+                    <a href="index.html">
+                        <img src="images/logo.png" alt="Logo de Sachtom's" class="logo">
+                    </a>
+                </div>
+            </div>
         </nav>
     </header>
 
-    <section>
+    <!-- Sección Nosotros -->
+    <section id="nosotros">
         <h2>Nuestra Historia</h2>
-        <p>Sachtom’s nació con el propósito de ofrecer un producto saludable y único en el mercado: el yogurt de Sacha Tomate. Con un enfoque en la sostenibilidad y el bienestar, trabajamos para mejorar la calidad de vida de nuestros consumidores y apoyar a la comunidad local.</p>
+        <p>Sachtom’s nació el 11 de Septiembre de 2012 con el propósito de ofrecer productos únicos en el mercado global. El yogurt de Sacha Tomate se creó con un enfoque en el estilo de vida saludable, trabajando para brindarles un producto para el cuidado de su salud y mejorar la calidad de vida de nuestros consumidores.</p>
         
         <h3>Misión</h3>
         <p>Estamos comprometidos en brindar a nuestros clientes yogures naturales de alta calidad, elaborados con ingredientes frescos y nutritivos. Nuestra misión es promover un estilo de vida saludable y sostenible mediante la fomentación de hábitos alimenticios conscientes y responsables.</p>
@@ -36,12 +46,14 @@
             <li><strong>Innovación:</strong> Creemos en la mejora continua y en el desarrollo de productos innovadores que beneficien a nuestros clientes y respeten el medio ambiente.</li>
         </ul>
         
-        <h3>Compromiso con la comunidad</h3>
+        <h3>Compromiso con la Comunidad</h3>
         <p>Nuestro producto está diseñado para mejorar la vida de las personas, con un enfoque en la reducción de la desnutrición y la promoción de hábitos saludables. Trabajamos en conjunto con productores locales para apoyar el desarrollo económico y social de las comunidades en las que operamos.</p>
     </section>
 
     <footer>
         <p>&copy; 2024 Sachtom's Yogurt - Todos los derechos reservados.</p>
     </footer>
+
+    <script src="js/script.js"></script>
 </body>
 </html>

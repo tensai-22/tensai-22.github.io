@@ -5,8 +5,8 @@
     --accent-color-red: #EA1D1D; /* Rojo corporativo */
     --accent-color-orange: #FFB133; /* Naranja corporativo */
     --accent-color-green: #7A9D46; /* Verde corporativo */
-    --header-bg-color: #EA1D1D; /* Fondo del encabezado en rojo */
-    --header-text-color: #FFF5E3; /* Texto del encabezado en color claro */
+    --header-bg-color: #FFFFFF; /* Fondo del encabezado en blanco */
+    --header-text-color: #EA1D1D; /* Texto del encabezado en rojo */
 }
 
 /* Estilos básicos */
@@ -21,34 +21,39 @@ body {
 
 /* Encabezado y Navegación */
 header {
-    background-color: var(--header-bg-color);
+    background-color: var(--header-bg-color); /* Fondo blanco del encabezado */
     padding: 15px 20px;
     display: flex;
     align-items: center;
-    justify-content: space-between;
+    justify-content: center; /* Centra el contenido horizontalmente */
     box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1);
     position: relative;
 }
 
-nav ul {
+.navbar {
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: space-between; /* Distribuye espacio entre elementos */
+}
+
+.nav-links {
     list-style: none;
     padding: 0;
     margin: 0;
     display: flex;
     gap: 20px;
-    flex-grow: 1;
-    justify-content: center;
 }
 
-nav ul li a {
-    color: var(--header-text-color);
+.nav-links li a {
+    color: var(--header-text-color); /* Texto en rojo */
     text-decoration: none;
     font-weight: bold;
     padding: 10px 15px;
     transition: color 0.3s, transform 0.2s;
 }
 
-nav ul li a:hover {
+.nav-links li a:hover {
     color: var(--accent-color-orange);
     transform: scale(1.05);
 }
@@ -70,15 +75,16 @@ nav ul li a:hover {
     transform: scale(1.05);
 }
 
+/* Logo en esquina superior derecha */
 .logo-container {
-    position: absolute;
-    top: 10px;
-    right: 20px;
+    display: flex;
+    align-items: center;
 }
 
 .logo {
-    width: 150px; /* Ajusta el tamaño del logo aquí */
+    width: 100px; /* Ajusta el tamaño del logo aquí para evitar que se desborde */
     transition: transform 0.3s;
+    display: inline-block;
 }
 
 .logo:hover {
@@ -88,7 +94,7 @@ nav ul li a:hover {
 /* Hero Section */
 #hero {
     position: relative;
-    background-image: linear-gradient(to bottom, rgba(255, 255, 255, 0.1), rgba(0, 0, 0, 0.5)), url('images/fotoinicio.jpg');
+    background-image: linear-gradient(to bottom, rgba(255, 255, 255, 0.1), rgba(0, 0, 0, 0.5)), url('images/fondo.jpg');
     background-size: cover;
     background-position: center;
     color: #FFF5E3;
@@ -98,6 +104,12 @@ nav ul li a:hover {
     flex-direction: column;
     align-items: center;
     justify-content: center;
+}
+
+#hero .overlay {
+    background: rgba(0, 0, 0, 0.3); /* Opcional: para mejorar la legibilidad del texto */
+    padding: 20px;
+    border-radius: 10px;
 }
 
 #hero h1 {
@@ -189,12 +201,12 @@ nav ul li a:hover {
     max-width: 800px;
 }
 
-#cta .cta-content h2 {
+.cta-content h2 {
     font-size: 2.5em;
     margin-bottom: 10px;
 }
 
-#cta .cta-content p {
+.cta-content p {
     font-size: 1.2em;
     margin-bottom: 20px;
 }

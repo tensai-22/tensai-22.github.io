@@ -7,21 +7,21 @@
     <link rel="stylesheet" href="css/style.css">
 </head>
 <body>
-    <!-- Barra de navegación con logo -->
+    <!-- Barra de navegación con logo a la derecha y botón de acción -->
     <header>
-        <nav>
-            <div class="logo-container">
-                <a href="index.html">
-                    <img src="images/logo.jpg" alt="Logo de Sachtom's" class="logo">
-                </a>
-            </div>
-            <ul>
+        <nav class="navbar">
+            <ul class="nav-links">
                 <li><a href="index.html">Inicio</a></li>
                 <li><a href="productos.html">Productos</a></li>
                 <li><a href="nosotros.html">Nosotros</a></li>
                 <li><a href="contacto.html">Contacto</a></li>
             </ul>
             <button class="cta-button" onclick="window.location.href='contacto.html'">Compra Ahora</button>
+            <div class="logo-container">
+                <a href="index.html">
+                    <img src="images/logo.png" alt="Logo de Sachtom's" class="logo">
+                </a>
+            </div>
         </nav>
     </header>
 
@@ -57,7 +57,7 @@
     <section id="caracteristicas">
         <h2>Características Destacadas</h2>
         <div class="tabs">
-            <button class="tab-button" onclick="showTab('beneficios')">Beneficios</button>
+            <button class="tab-button active-button" onclick="showTab('beneficios')">Beneficios</button>
             <button class="tab-button" onclick="showTab('ingredientes')">Ingredientes</button>
             <button class="tab-button" onclick="showTab('usos')">Usos</button>
         </div>
