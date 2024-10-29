@@ -1,21 +1,23 @@
-/* Colores */
+/* Variables de color */
 :root {
     --background-color: #f4f4f9;
     --primary-color: #333;
-    --accent-color: #0073e6;
-    --menu-background: #333;
-    --menu-text-color: #f4f4f9;
+    --accent-color: #4CAF50;
+    --header-bg-color: #333;
+    --header-text-color: #f4f4f9;
 }
 
+/* Estilos básicos */
 body {
     font-family: Arial, sans-serif;
     background-color: var(--background-color);
     color: var(--primary-color);
     margin: 0;
+    padding: 0;
 }
 
 header {
-    background-color: var(--menu-background);
+    background-color: var(--header-bg-color);
     padding: 10px 0;
     text-align: center;
 }
@@ -23,19 +25,17 @@ header {
 nav ul {
     list-style: none;
     padding: 0;
-    margin: 0;
     display: flex;
     justify-content: center;
-}
-
-nav ul li {
-    margin: 0 15px;
+    gap: 15px;
 }
 
 nav ul li a {
-    color: var(--menu-text-color);
+    color: var(--header-text-color);
     text-decoration: none;
     font-weight: bold;
+    padding: 10px 15px;
+    transition: color 0.3s;
 }
 
 nav ul li a:hover {
@@ -44,12 +44,30 @@ nav ul li a:hover {
 
 section {
     padding: 20px;
-    margin: 20px;
+    margin: 20px auto;
+    max-width: 800px;
     background-color: white;
     border-radius: 5px;
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    text-align: center;
 }
 
-h1, h2 {
+h1 {
     color: var(--accent-color);
+    font-size: 2em;
+    margin-bottom: 10px;
+}
+
+p {
+    font-size: 1.1em;
+    line-height: 1.6;
+    color: var(--primary-color);
+}
+
+img {
+    max-width: 100%;
+    height: auto;
+    display: block;
+    margin: 20px auto;
+    border-radius: 5px;
 }
